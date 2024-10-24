@@ -3,12 +3,9 @@ while True :
         name=input("what is your name :")
         print(f"welcome to the tournament mr {name}")
         import random
-        def get_choice():
-           options=["rock", "paper", "scissors"]
-    
+        def get_choice(computer_choice,player_choice ):
            while True:
-                computer_choice= random.choice(options)
-                player_choice=input(f"enter a valid choice ,{options} :")
+                
                 if (player_choice== "rock"):
                  break
                 elif(player_choice=="paper"):   
@@ -17,6 +14,7 @@ while True :
                  break
                
                
+           
            if (player_choice=="rock" and computer_choice=="scissors"):
                  print("you win")   
            elif(player_choice=="scissors" and computer_choice=="paper"):
@@ -31,11 +29,11 @@ while True :
                  print("you win")  
            elif(player_choice==computer_choice):
                  print('it\'s a tie')
-    
            choices={"player choice": player_choice, "computer choice": computer_choice}
-    
+           
            return choices   
-        choices=  get_choice()
+        options=["rock", "paper", "scissors"]
+        choices=  get_choice(computer_choice=random.choice(options),player_choice= input(f"enter a valid choice ,{options} :"))
         print(choices)
         option_2=["yes", "no"]
  
